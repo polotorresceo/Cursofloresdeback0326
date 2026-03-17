@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flores de Bach, Aceites Esenciales y Numerología · Ly Badillo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #b8860b;
+    --gold-light: #d4a843;
+    --gold-pale: #f0d080;
+    --olive: #6b7c4a;
+    --cream: #faf6ee;
+    --warm-white: #fffdf7;
+    --deep: #2a1f0e;
+    --sage: #8fa870;
+    --rose-dust: #c9a89a;
+    --bg: #f5efe3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--bg);
+    color: var(--deep);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(107,124,74,0.2) 0%, transparent 50%),
+      linear-gradient(160deg, #fdf7ec 0%, #f0e6cc 50%, #e8d9b8 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(184,134,11,0.08) 1px, transparent 1px),
+      radial-gradient(circle at 85% 75%, rgba(107,124,74,0.08) 1px, transparent 1px);
+    background-size: 40px 40px, 55px 55px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 40px;
+    margin-bottom: 32px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--deep);
+    animation: fadeDown 0.9s 0.1s ease both;
+    max-width: 820px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero h1 strong {
+    font-weight: 600;
+    color: var(--olive);
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rose-dust);
+    margin-top: 20px;
+    animation: fadeDown 1s 0.2s ease both;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 32px auto;
+    animation: fadeDown 1s 0.3s ease both;
+  }
+
+  .hero-date-box {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(184,134,11,0.3);
+    border-radius: 16px;
+    padding: 28px 48px;
+    animation: fadeUp 1s 0.4s ease both;
+  }
+
+  .hero-date-box .date-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  .hero-date-box .date-sub {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-top: 6px;
+  }
+
+  .hero-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .hero-dots span {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    opacity: 0.5;
+  }
+  .hero-dots span:nth-child(2) { opacity: 1; background: var(--gold); }
+
+  .hero-numbers {
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 15vw, 160px);
+    font-weight: 300;
+    color: rgba(184,134,11,0.06);
+    pointer-events: none;
+  }
+  .hn-tl { top: -20px; left: -10px; }
+  .hn-tr { top: -20px; right: -10px; }
+  .hn-bl { bottom: -20px; left: -10px; }
+  .hn-br { bottom: -20px; right: -10px; }
+
+  .cta-hero {
+    display: inline-block;
+    margin-top: 36px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 18px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 32px rgba(184,134,11,0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeUp 1s 0.6s ease both;
+  }
+  .cta-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(184,134,11,0.5);
+  }
+
+  /* ── WHAT IS THIS ── */
+  .section {
+    padding: 96px 24px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 400;
+    text-align: center;
+    color: var(--deep);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-lead {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #5a4a35;
+    max-width: 680px;
+    margin: 0 auto 60px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── 3 PILLARS ── */
+  .pillars {
+    background: linear-gradient(180deg, #f5efe3 0%, #ede3cf 100%);
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .pillar-card {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 24px;
+    padding: 48px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s, box-shadow 0.35s;
+  }
+
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(184,134,11,0.2); }
+  .pillar-card:hover::before { opacity: 1; }
+
+  .pillar-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(184,134,11,0.15);
+    position: absolute;
+    top: 16px; right: 24px;
+    line-height: 1;
+  }
+
+  .pillar-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--deep);
+    margin-bottom: 12px;
+  }
+
+  .pillar-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #6b5840;
+    font-weight: 300;
+  }
+
+  /* ── TEMARIO ── */
+  .temario {
+    background: var(--deep);
+    color: var(--cream);
+  }
+
+  .temario .section-title { color: var(--cream); }
+  .temario .section-label { color: var(--gold-pale); }
+  .temario .section-lead { color: rgba(250,246,238,0.7); }
+
+  .clases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .clase-card {
+    border: 1px solid rgba(184,134,11,0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .clase-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .clase-header {
+    background: linear-gradient(135deg, rgba(184,134,11,0.3), rgba(107,124,74,0.2));
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .clase-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold-pale);
+    line-height: 1;
+    min-width: 60px;
+  }
+
+  .clase-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  .clase-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-top: 2px;
+  }
+
+  .clase-body {
+    padding: 24px 28px;
+  }
+
+  .clase-list {
+    list-style: none;
+  }
+
+  .clase-list li {
+    font-size: 12.5px;
+    letter-spacing: 0.5px;
+    color: rgba(250,246,238,0.75);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 300;
+  }
+
+  .clase-list li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 7px;
+    flex-shrink: 0;
+  }
+
+  .clase-list li:last-child { border-bottom: none; }
+
+  /* Clase 5 especial */
+  .clase-card.especial {
+    border-color: rgba(212,168,67,0.5);
+    background: linear-gradient(160deg, rgba(184,134,11,0.1), rgba(107,124,74,0.1));
+  }
+
+  .clase-card.especial .clase-header {
+    background: linear-gradient(135deg, rgba(184,134,11,0.5), rgba(107,124,74,0.4));
+  }
+
+  /* ── BONUS ── */
+  .bonus {
+    background: linear-gradient(160deg, #f0e6cc 0%, #e8d5b0 100%);
+  }
+
+  .bonus-box {
+    background: linear-gradient(135deg, var(--deep) 0%, #3d2d10 100%);
+    border-radius: 28px;
+    padding: 60px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .bonus-box::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(transparent, rgba(184,134,11,0.08), transparent, rgba(107,124,74,0.06), transparent);
+    animation: spin 20s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .bonus-inner { position: relative; z-index: 1; }
+
+  .bonus-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 40px;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+
+  .bonus-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--cream);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  .bonus-box p {
+    color: rgba(250,246,238,0.7);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+
+  .bonus-pages {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(184,134,11,0.2);
+    border: 1px solid rgba(184,134,11,0.4);
+    border-radius: 50px;
+    padding: 16px 36px;
+  }
+
+  .bonus-pages .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--gold-pale);
+    line-height: 1;
+  }
+
+  .bonus-pages .label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  /* ── INVERSIÓN ── */
+  .inversion {
+    background: var(--warm-white);
+    text-align: center;
+  }
+
+  .price-display {
+    margin: 48px auto;
+    max-width: 480px;
+    position: relative;
+  }
+
+  .price-ring {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,134,11,0.08) 0%, rgba(184,134,11,0.02) 60%, transparent 70%);
+    border: 1px solid rgba(184,134,11,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .price-ring::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1px dashed rgba(184,134,11,0.25);
+  }
+
+  .price-ring .currency {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--gold);
+    font-weight: 300;
+    margin-bottom: -4px;
+  }
+
+  .price-ring .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: var(--deep);
+    line-height: 1;
+  }
+
+  .price-ring .includes {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-top: 6px;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: #7a6550;
+    margin-top: 20px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  /* ── MAESTRA ── */
+  .maestra {
+    background: linear-gradient(180deg, #ede3cf 0%, #e0d0b0 100%);
+  }
+
+  .maestra-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 28px;
+    padding: 56px 48px;
+    text-align: center;
+  }
+
+  .maestra-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(184,134,11,0.4);
+  }
+
+  .maestra-card .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--deep);
+    margin-bottom: 4px;
+  }
+
+  .maestra-card .title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .maestra-card p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #6b5840;
+    font-weight: 300;
+    margin-bottom: 36px;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(37,211,102,0.55);
+  }
+
+  .wa-icon { font-size: 1.3rem; }
+
+  /* ── NUMEROLOGÍA BANNER ── */
+  .num-banner {
+    background: var(--deep);
+    padding: 64px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .num-strip {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .num-bubble {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,134,11,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--gold-pale);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .num-bubble:hover {
+    background: rgba(184,134,11,0.2);
+    transform: scale(1.15);
+  }
+
+  .num-banner h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--cream);
+    font-weight: 300;
+    margin-bottom: 12px;
+  }
+
+  .num-banner p {
+    color: rgba(250,246,238,0.65);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  /* ── FOOTER CTA ── */
+  .footer-cta {
+    background: linear-gradient(160deg, #f0e6cc 0%, #e4d4a8 100%);
+    padding: 96px 24px;
+    text-align: center;
+  }
+
+  .footer-cta .section-title { margin-bottom: 40px; }
+
+  .footer-cta .date-pill {
+    display: inline-flex;
+    gap: 24px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(184,134,11,0.25);
+    border-radius: 50px;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .date-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .date-item .di-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .date-item .di-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--deep);
+  }
+
+  .date-sep {
+    width: 1px;
+    background: rgba(184,134,11,0.2);
+    align-self: stretch;
+  }
+
+  .footer-small {
+    font-size: 12px;
+    color: #8a7558;
+    margin-top: 28px;
+    letter-spacing: 1px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .hero-date-box { padding: 20px 28px; }
+    .bonus-box { padding: 40px 24px; }
+    .maestra-card { padding: 40px 24px; }
+    .clases-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-numbers hn-tl">1</span>
+  <span class="hero-numbers hn-tr">8</span>
+  <span class="hero-numbers hn-bl">1</span>
+  <span class="hero-numbers hn-br">8</span>
+
+  <div class="hero-badge">Taller en Línea · Vía Zoom</div>
+
+  <h1>Flores de Bach,<br><em>Aceites Esenciales</em><br>y <strong>Numerología</strong></h1>
+
+  <p class="hero-sub">Sanación integral · Bienestar emocional · Vibración consciente</p>
+  <div class="hero-divider"></div>
+
+  <div class="hero-date-box">
+    <div class="date-line">Jueves 19 de Marzo · 7 PM</div>
+    <div class="date-sub">Inicio del taller · 5 clases transformadoras</div>
+    <div class="hero-dots"><span></span><span></span><span></span></div>
+  </div>
+
+  <a href="https://wa.me/522218482898" class="cta-hero">Reserva tu lugar ✦</a>
+</section>
+
+<!-- PILLARS -->
+<section class="section pillars">
+  <div class="container">
+    <p class="section-label">¿Qué aprenderás?</p>
+    <h2 class="section-title">Un taller de <em>tres mundos</em><br>integrados en uno</h2>
+    <p class="section-lead">
+      Descubre cómo las flores del Dr. Bach, la sabiduría de los aceites esenciales
+      y la magia de los números se unen para transformar tu mundo emocional.
+    </p>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <span class="pillar-num">01</span>
+        <span class="pillar-icon">🌸</span>
+        <h3>Flores de Bach</h3>
+        <p>Las 38 esencias florales del Dr. Edward Bach para equilibrar los estados emocionales desde la raíz. Aprende su diagnóstico, preparación y uso.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-num">02</span>
+        <span class="pillar-icon">🌿</span>
+        <h3>Aceites Esenciales</h3>
+        <p>Cada flor tiene un aceite esencial afín que potencia su vibración sanadora. Principios de aromaterapia aplicados al bienestar emocional profundo.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-num">03</span>
+        <span class="pillar-icon">✦</span>
+        <h3>Numerología</h3>
+        <p>Conecta la vibración del 1 al 9 con tus emociones predominantes. Descubre cuáles flores de Bach son afines a tu número y tu sombra emocional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMARIO -->
+<section class="section temario">
+  <div class="container">
+    <p class="section-label">Contenido del Taller</p>
+    <h2 class="section-title">Temario <em>completo</em></h2>
+    <p class="section-lead">5 clases con contenido profundo, práctico y transformador. Cada sesión construye sobre la anterior.</p>
+
+    <div class="clases-grid">
+
+      <!-- Clase 1 -->
+      <div class="clase-card">
+        <div class="clase-header">
+          <div class="clase-num">01</div>
+          <div>
+            <div class="clase-title">Clase uno</div>
+            <div class="clase-subtitle">Los Fundamentos & Primeras Flores</div>
+          </div>
+        </div>
+        <div class="clase-body">
+          <ul class="clase-list">
+            <li>Vida de Edward Bach</li>
+            <li>Aceites esenciales — Principios de sanación</li>
+            <li>Agrimony y sus aceites</li>
+            <li>Aspen y sus aceites</li>
+            <li>Beech y sus aceites</li>
+            <li>Centaury y sus aceites</li>
+            <li>Cerato y sus aceites</li>
+            <li>Cherry Plum y sus aceites</li>
+            <li>Chestnut Bud y sus aceites</li>
+            <li>Chicory y sus aceites</li>
+            <li>Grab Apple y sus aceites</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Clase 2 -->
+      <div class="clase-card">
+        <div class="clase-header">
+          <div class="clase-num">02</div>
+          <div>
+            <div class="clase-title">Clase dos</div>
+            <div class="clase-subtitle">El Corazón del Repertorio</div>
+          </div>
+        </div>
+        <div class="clase-body">
+          <ul class="clase-list">
+            <li>Elm · Gentian · Gorse</li>
+            <li>Heather y sus aceites</li>
+            <li>Holly y sus aceites</li>
+            <li>Honeysuckle y sus aceites</li>
+            <li>Hornbeam y sus aceites</li>
+            <li>Impatiens y sus aceites</li>
+            <li>Larch · Mímulus</li>
+            <li>Mustard y sus aceites</li>
+            <li>Oak · Olive · Pine</li>
+            <li>Red Chestnut y sus aceites</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Clase 3 -->
+      <div class="clase-card">
+        <div class="clase-header">
+          <div class="clase-num">03</div>
+          <div>
+            <div class="clase-title">Clase tres</div>
+            <div class="clase-subtitle">Las Últimas Flores & Rescue Remedy</div>
+          </div>
+        </div>
+        <div class="clase-body">
+          <ul class="clase-list">
+            <li>Rock Rose · Rock Water</li>
+            <li>Scleranthus y sus aceites</li>
+            <li>Star of Bethlehem</li>
+            <li>Sweet Chestnut · Vervain</li>
+            <li>Vine · Walnut · Water Violet</li>
+            <li>White Chestnut · Wild Oat</li>
+            <li>Wild Rose · Willow</li>
+            <li>🌟 Rescue Remedy</li>
+            <li>Los 7 estados emocionales básicos</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Clase 4 -->
+      <div class="clase-card">
+        <div class="clase-header">
+          <div class="clase-num">04</div>
+          <div>
+            <div class="clase-title">Clase cuatro</div>
+            <div class="clase-subtitle">Práctica & Aplicación Clínica</div>
+          </div>
+        </div>
+        <div class="clase-body">
+          <ul class="clase-list">
+            <li>Experiencias en el tratamiento</li>
+            <li>Preparación, dosificación y conservación</li>
+            <li>10 motivos para tomar flores de Bach</li>
+            <li>Usos especiales: embarazo, bebés, niños</li>
+            <li>Uso en madres, animales y plantas</li>
+            <li>Guía comparativa entre flores</li>
+            <li>Resumen integrador</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Clase 5 ESPECIAL -->
+      <div class="clase-card especial">
+        <div class="clase-header">
+          <div class="clase-num">05</div>
+          <div>
+            <div class="clase-title">Clase cinco · ESPECIAL</div>
+            <div class="clase-subtitle">Numerología + Flores de Bach</div>
+          </div>
+        </div>
+        <div class="clase-body">
+          <ul class="clase-list">
+            <li>Numerología + Flores de Bach</li>
+            <li>Cómo relacionar números con emociones</li>
+            <li>Vibración profunda del 1 al 9</li>
+            <li>Cómo se vive cada vibración</li>
+            <li>Sombras emocionales por número</li>
+            <li>Flores de Bach afines a la vibración</li>
+            <li>✦ Clave terapéutica</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NUMEROLOGÍA BANNER -->
+<section class="num-banner">
+  <div class="num-strip">
+    <div class="num-bubble">1</div>
+    <div class="num-bubble">2</div>
+    <div class="num-bubble">3</div>
+    <div class="num-bubble">4</div>
+    <div class="num-bubble">5</div>
+    <div class="num-bubble">6</div>
+    <div class="num-bubble">7</div>
+    <div class="num-bubble">8</div>
+    <div class="num-bubble">9</div>
+  </div>
+  <h3>Cada número vibra una emoción.<br><em style="font-style:italic;color:var(--gold-light)">Cada emoción tiene su flor.</em></h3>
+  <p>Descubre el mapa sagrado que conecta tu número de vida con tu equilibrio emocional profundo.</p>
+</section>
+
+<!-- BONUS MANUAL -->
+<section class="section bonus">
+  <div class="container">
+    <p class="section-label">Incluido en tu inversión</p>
+    <h2 class="section-title">El <em>Manual</em> que lo cambia todo</h2>
+    <div class="bonus-box">
+      <div class="bonus-inner">
+        <span class="bonus-tag">✦ Bonus exclusivo</span>
+        <h3>Manual Completo de Flores de Bach, Aceites Esenciales y Numerología</h3>
+        <p>Al finalizar el taller recibes un manual digitalcreado especialmente para el curso, que puedes conservar, consultar y compartir en tu práctica profesional o personal.</p>
+        <div class="bonus-pages">
+          <span class="num">100+</span>
+          <span class="label">Páginas<br>de contenido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVERSIÓN -->
+<section class="section inversion">
+  <div class="container">
+    <p class="section-label">Inversión</p>
+    <h2 class="section-title">Tu transformación<br>tiene un <em>valor sagrado</em></h2>
+    <div class="price-display">
+      <div class="price-ring">
+        <span class="currency">$</span>
+        <span class="amount">888</span>
+        <span class="includes">incluye manual completo</span>
+      </div>
+      <p class="price-note">El número 888 vibra abundancia, equilibrio y plenitud. Una cifra con intención.</p>
+    </div>
+    <a href="https://wa.me/522218482898" class="cta-hero" style="display:inline-block;margin-top:0">
+      Inscribirme ahora ✦
+    </a>
+  </div>
+</section>
+
+<!-- MAESTRA -->
+<section class="section maestra">
+  <div class="container">
+    <p class="section-label">Tu guía en este camino</p>
+    <h2 class="section-title">Conoce a tu <em>Maestra</em></h2>
+    <div class="maestra-card">
+      <div class="maestra-avatar">L</div>
+      <div class="name">Ly Badillo</div>
+      <div class="title">Numeróloga Certificada · Experta en Flores de Bach</div>
+      <p>
+        Ly Badillo es numeróloga con amplia experiencia en el acompañamiento emocional y espiritual a través de las flores de Bach, aceites esenciales y la sabiduría de los números. Su metodología integra herramientas holísticas para generar transformación real, profunda y duradera.
+      </p>
+      <a href="https://wa.me/522218482898" class="contact-button">
+        <span class="wa-icon">💬</span>
+        Escríbeme al WhatsApp
+      </a>
+      <p style="margin-top:16px;font-size:12px;color:#8a7558;font-weight:300;letter-spacing:1px">
+        Tel. 2218482898
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="container">
+    <p class="section-label">No te pierdas esta oportunidad</p>
+    <h2 class="section-title">Comienza tu viaje<br>el <em>Jueves 19 de Marzo</em></h2>
+
+    <div class="date-pill">
+      <div class="date-item">
+        <span class="di-label">Fecha</span>
+        <span class="di-val">19 Marzo</span>
+      </div>
+      <div class="date-sep"></div>
+      <div class="date-item">
+        <span class="di-label">Hora</span>
+        <span class="di-val">7:00 PM</span>
+      </div>
+      <div class="date-sep"></div>
+      <div class="date-item">
+        <span class="di-label">Modalidad</span>
+        <span class="di-val">Zoom</span>
+      </div>
+      <div class="date-sep"></div>
+      <div class="date-item">
+        <span class="di-label">Inversión</span>
+        <span class="di-val">$888 MXN</span>
+      </div>
+    </div>
+
+    <a href="https://wa.me/522218482898" class="cta-hero">
+      Quiero inscribirme · WhatsApp
+    </a>
+
+    <p class="footer-small">Ly Badillo · Numeróloga · 2218482898 · Vía Zoom · Cupo limitado</p>
+  </div>
+</section>
+
+</body>
+</html>
