@@ -28,6 +28,65 @@
     overflow-x: hidden;
   }
 
+  /* ── PORTADA DEL LIBRO (PRIMERA SECCIÓN) ── */
+  .book-cover-section {
+    background: linear-gradient(160deg, #fdf7ec 0%, #f0e6cc 50%, #e8d9b8 100%);
+    padding: 48px 20px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .book-cover-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(184,134,11,0.07) 1px, transparent 1px),
+      radial-gradient(circle at 85% 75%, rgba(107,124,74,0.07) 1px, transparent 1px);
+    background-size: 40px 40px, 55px 55px;
+    pointer-events: none;
+  }
+
+  .book-cover-label {
+    display: inline-block;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 7px 22px;
+    border-radius: 40px;
+    margin-bottom: 28px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .book-cover-img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow:
+      0 8px 32px rgba(184,134,11,0.25),
+      0 2px 8px rgba(42,31,14,0.18);
+    animation: fadeUp 1s 0.2s ease both;
+    position: relative;
+    z-index: 1;
+  }
+
+  .book-cover-caption {
+    margin-top: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 4vw, 1.7rem);
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 300;
+    letter-spacing: 1px;
+    animation: fadeUp 1s 0.4s ease both;
+  }
+
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -375,7 +434,6 @@
 
   .clase-list li:last-child { border-bottom: none; }
 
-  /* Clase 5 especial */
   .clase-card.especial {
     border-color: rgba(212,168,67,0.5);
     background: linear-gradient(160deg, rgba(184,134,11,0.1), rgba(107,124,74,0.1));
@@ -739,10 +797,25 @@
     .bonus-box { padding: 40px 24px; }
     .maestra-card { padding: 40px 24px; }
     .clases-grid { grid-template-columns: 1fr; }
+    .book-cover-section { padding: 36px 16px 44px; }
+    .book-cover-img { max-width: 90vw; border-radius: 12px; }
+    .footer-cta .date-pill { padding: 16px 20px; gap: 16px; }
+    .date-sep { display: none; }
   }
 </style>
 </head>
 <body>
+
+<!-- ══ PORTADA DEL LIBRO — INICIO DEL FUNNEL ══ -->
+<section class="book-cover-section">
+  <span class="book-cover-label">Taller en Línea · Vía Zoom</span>
+  <img
+    src="https://i.ibb.co/PprqgNQ/Whats-App-Image-2026-04-24-at-16-45-47.jpg"
+    alt="Portada del Manual: Flores de Bach, Aceites Esenciales y Numerología — Ly Badillo"
+    class="book-cover-img"
+  >
+  <p class="book-cover-caption">Tu manual digital de más de 100 páginas, incluido en el taller</p>
+</section>
 
 <!-- HERO -->
 <section class="hero">
@@ -759,7 +832,7 @@
   <div class="hero-divider"></div>
 
   <div class="hero-date-box">
-    <div class="date-line">Jueves 30 de Abril · 7 PM</div>
+    <div class="date-line">Miércoles 30 de Abril · 7 PM</div>
     <div class="date-sub">Inicio del taller · 5 clases transformadoras</div>
     <div class="hero-dots"><span></span><span></span><span></span></div>
   </div>
@@ -767,12 +840,7 @@
   <a href="https://wa.me/522218482898" class="cta-hero">Reserva tu lugar ✦</a>
 </section>
 
-<img src="https://i.ibb.co/PprqgNQ/Whats-App-Image-2026-04-24-at-16-45-47.jpg" alt="Whats App Image 2026 04 24 at 16 45 47" border="0">
-
-  
-  
-  
-  <!-- PILLARS -->
+<!-- PILLARS -->
 <section class="section pillars">
   <div class="container">
     <p class="section-label">¿Qué aprenderás?</p>
@@ -834,7 +902,7 @@
             <li>Cherry Plum y sus aceites</li>
             <li>Chestnut Bud y sus aceites</li>
             <li>Chicory y sus aceites</li>
-            <li>Grab Apple y sus aceites</li>
+            <li>Crab Apple y sus aceites</li>
           </ul>
         </div>
       </div>
@@ -856,7 +924,7 @@
             <li>Honeysuckle y sus aceites</li>
             <li>Hornbeam y sus aceites</li>
             <li>Impatiens y sus aceites</li>
-            <li>Larch · Mímulus</li>
+            <li>Larch · Mimulus</li>
             <li>Mustard y sus aceites</li>
             <li>Oak · Olive · Pine</li>
             <li>Red Chestnut y sus aceites</li>
@@ -962,7 +1030,7 @@
       <div class="bonus-inner">
         <span class="bonus-tag">✦ Bonus exclusivo</span>
         <h3>Manual Completo de Flores de Bach, Aceites Esenciales y Numerología</h3>
-        <p>Al finalizar el taller recibes un manual digitalcreado especialmente para el curso, que puedes conservar, consultar y compartir en tu práctica profesional o personal.</p>
+        <p>Al finalizar el taller recibes un manual digital creado especialmente para el curso, que puedes conservar, consultar y compartir en tu práctica profesional o personal.</p>
         <div class="bonus-pages">
           <span class="num">100+</span>
           <span class="label">Páginas<br>de contenido</span>
@@ -1018,12 +1086,12 @@
 <section class="footer-cta">
   <div class="container">
     <p class="section-label">No te pierdas esta oportunidad</p>
-    <h2 class="section-title">Comienza tu viaje<br>el <em>Jueves 23 de Abril</em></h2>
+    <h2 class="section-title">Comienza tu viaje<br>el <em>Miércoles 30 de Abril</em></h2>
 
     <div class="date-pill">
       <div class="date-item">
         <span class="di-label">Fecha</span>
-        <span class="di-val">23 Abril</span>
+        <span class="di-val">30 Abril 2026</span>
       </div>
       <div class="date-sep"></div>
       <div class="date-item">
